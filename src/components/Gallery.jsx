@@ -13,18 +13,22 @@ const Instagram = ({ className }) => (
 // Assets
 import videoFossa from '../assets/video-de-fundo-caminhao.mp4';
 import videoDesentupimento from '../assets/desentupimento-sonda.mp4';
+import videoCaminhaoNovo from '../assets/video-caminhao-novo.mp4';
 import imgCaixaGordura from '../assets/caixa-de-gordura.jpg';
 import imgHidrojateamento from '../assets/foto-caminhao-lateral.jpg';
 import imgAntesDepois from '../assets/foto-de-fundo.jpg';
 import imgEquipe from '../assets/equipe-trabalhando.jpg';
+import imgEquipeCondominio from '../assets/equipe-limpeza de condominio.jpeg';
 
 const galleryItems = [
   { id: 1, label: '', video: videoFossa },
   { id: 2, label: 'Desentupimento', video: videoDesentupimento },
-  { id: 3, label: '', image: imgHidrojateamento },
-  { id: 4, label: 'Antes e Depois', image: imgCaixaGordura },
-  { id: 5, label: '', image: imgAntesDepois },
-  { id: 6, label: 'Equipe em Ação', image: imgEquipe },
+  { id: 3, label: 'Caminhão Novo', video: videoCaminhaoNovo },
+  { id: 4, label: '', image: imgHidrojateamento },
+  { id: 5, label: 'Antes e Depois', image: imgCaixaGordura },
+  { id: 6, label: '', image: imgAntesDepois },
+  { id: 7, label: 'Equipe em Ação', image: imgEquipe },
+  { id: 8, label: 'Limpeza em Condomínio', image: imgEquipeCondominio, objectPosition: 'top' },
 ];
 
 function GalleryCard({ item, index, isInView }) {
@@ -79,6 +83,7 @@ function GalleryCard({ item, index, isInView }) {
           src={item.image}
           alt={item.label}
           className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
         />
       )}
 
@@ -126,7 +131,7 @@ export default function Gallery() {
         </div>
 
         {/* Gallery grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
           {galleryItems.map((item, index) => (
             <GalleryCard key={item.id} item={item} index={index} isInView={isInView} />
           ))}

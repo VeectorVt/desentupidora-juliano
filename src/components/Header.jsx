@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Phone, Menu, X, Truck } from 'lucide-react';
+import { Phone, Menu, X } from 'lucide-react';
+import logoJuliano from '../assets/logo-juliano.png';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -43,16 +44,14 @@ export default function Header() {
           {/* Logo */}
           <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-orange-500/30">
-                <Truck className="w-6 h-6 md:w-7 md:h-7 text-white" />
-              </div>
+              <img src={logoJuliano} alt="Juliano Desentupidora" className="w-10 h-10 md:w-12 md:h-12 rounded-xl object-contain transform group-hover:scale-110 transition-transform duration-300" />
             </div>
             <div className="flex flex-col">
-              <span className="text-white font-extrabold text-base md:text-lg leading-tight tracking-tight">
-                Desentupidora
-              </span>
-              <span className="text-orange-400 font-bold text-sm md:text-base leading-tight -mt-0.5">
+              <span className="text-orange-400 font-extrabold text-base md:text-lg leading-tight tracking-tight">
                 Juliano
+              </span>
+              <span className="text-white font-bold text-sm md:text-base leading-tight -mt-0.5">
+                Desentupidora
               </span>
             </div>
           </a>
