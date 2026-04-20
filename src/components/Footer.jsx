@@ -60,13 +60,15 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-orange-400 flex-shrink-0" />
                 (73) 99927-9454
               </a>
-              <a href="mailto:contato@desentupidorajuliano.com" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm min-w-0">
+              <a href="mailto:contato.julianodesentupidora@gmail.com
+" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm min-w-0">
                 <Mail className="w-4 h-4 text-orange-400 flex-shrink-0" />
-                <span className="truncate">contato@desentupidorajuliano.com</span>
+                <span className="truncate">contato.julianodesentupidora@gmail.com
+</span>
               </a>
-              <a href="https://instagram.com/juliano_desentupidora" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
+              <a href="https://instagram.com/julianodesentupidora" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
                 <Instagram className="w-4 h-4 text-orange-400 flex-shrink-0" />
-                @juliano_desentupidora
+                @julianodesentupidora
               </a>
             </div>
           </div>

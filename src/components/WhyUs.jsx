@@ -62,7 +62,7 @@ export default function WhyUs() {
           ref={counterRef}
           className={`grid grid-cols-3 gap-4 sm:gap-8 mb-20 ${counterInView ? 'animate-fade-in-up' : 'opacity-0'}`}
         >
-          <Counter end="15" suffix="+" label="Anos de experiência" isInView={counterInView} />
+          <Counter end="10" suffix="+" label="Anos de experiência" isInView={counterInView} />
           <Counter end="800" prefix="+" suffix="" label="Clientes atendidos" isInView={counterInView} />
           <Counter end="24" suffix="h" label="Disponibilidade" isInView={counterInView} />
         </div>

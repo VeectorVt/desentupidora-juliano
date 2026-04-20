@@ -17,8 +17,8 @@ import videoCaminhaoNovo from '../assets/video-caminhao-novo.mp4';
 import imgCaixaGordura from '../assets/caixa-de-gordura.jpg';
 import imgHidrojateamento from '../assets/foto-caminhao-lateral.jpg';
 import imgAntesDepois from '../assets/foto-de-fundo.jpg';
-import imgEquipe from '../assets/equipe-trabalhando.jpg';
 import imgEquipeCondominio from '../assets/equipe-limpeza de condominio.jpeg';
+import videoLimpezaQuimico from '../assets/limpeza-quimico.mp4';
 
 const galleryItems = [
   { id: 1, label: '', video: videoFossa },
@@ -27,7 +27,7 @@ const galleryItems = [
   { id: 4, label: '', image: imgHidrojateamento },
   { id: 5, label: 'Antes e Depois', image: imgCaixaGordura },
   { id: 6, label: '', image: imgAntesDepois },
-  { id: 7, label: 'Equipe em Ação', image: imgEquipe },
+  { id: 7, label: 'Limpeza Química', video: videoLimpezaQuimico },
   { id: 8, label: 'Limpeza em Condomínio', image: imgEquipeCondominio, objectPosition: 'top' },
 ];
 

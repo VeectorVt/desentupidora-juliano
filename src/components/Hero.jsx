@@ -81,7 +81,7 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10 animate-fade-in-up delay-400">
           <a
-            href="https://wa.me/5573991247631"
+            href="https://wa.me/5573988499596"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-full shadow-2xl shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 hover:scale-105 w-full sm:w-auto justify-center"
@@ -97,7 +97,7 @@ export default function Hero() {
             className="group inline-flex items-center gap-2 bg-white/[0.07] hover:bg-white/[0.12] border border-white/15 hover:border-orange-500/40 text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105 w-full sm:w-auto justify-center"
           >
             <Phone className="w-5 h-5 text-orange-400" />
-            (73) 99124-7631
+            (73) 98849-9596
           </a>
         </div>
 

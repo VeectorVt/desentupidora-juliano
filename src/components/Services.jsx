@@ -4,7 +4,7 @@ import { useInView } from '../hooks/useInView';
 import desentupimentoImg from '../assets/desentupimento-sonda.jpg';
 import hidrojateamento from '../assets/hidrojateamento.jpg';
 import caixaDeGordura from '../assets/caixa-de-gordura.jpg';
-import limpaFossa from '../assets/limpa-fossa.jpg';
+import limpaFossaVideo from '../assets/limpeza-fossa-1.mp4';
 import limpezaCondominioEquipe from '../assets/limpeza-condominio-equipe.jpeg';
 
 const services = [
@@ -14,7 +14,7 @@ const services = [
     description: 'Equipamentos modernos e descarte ecológico',
     badge: 'Atendimento em até 1h',
     whatsappText: 'Preciso%20de%20Limpeza%20de%20Fossa',
-    image: limpaFossa,
+    video: limpaFossaVideo,
   },
   {
     icon: Trash2,
@@ -201,15 +201,32 @@ export default function Services() {
                     <div
                       className={`group bg-white rounded-2xl overflow-hidden shadow-lg shadow-gray-200/50 hover:shadow-xl hover:shadow-orange-100/50 border border-gray-100 hover:border-orange-200 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col select-none`}
                     >
-                      {/* Card image */}
-                      {service.image && (
+                      {/* Card media (image or video) */}
+                      {(service.image || service.video) && (
                         <div className="relative h-48 overflow-hidden">
-                          <img
-                            src={service.image}
-                            alt={service.title}
-                            className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
-                            draggable={false}
-                          />
+                          {service.video ? (
+                            <video
+                              src={service.video}
+                              autoPlay
+                              muted
+                              playsInline
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                              style={{ objectPosition: 'center 30%' }}
+                              onTimeUpdate={(e) => {
+                                if (e.target.currentTime >= 5) {
+                                  e.target.currentTime = 0;
+                                  e.target.play();
+                                }
+                              }}
+                            />
+                          ) : (
+                            <img
+                              src={service.image}
+                              alt={service.title}
+                              className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
+                              draggable={false}
+                            />
+                          )}
                           <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent"></div>
 
                           {/* Floating badge on image */}
@@ -240,7 +257,7 @@ export default function Services() {
 
                         {/* WhatsApp button */}
                         <a
-                          href={`https://wa.me/5573991247631?text=${service.whatsappText}`}
+                          href={`https://wa.me/5573988499596?text=${service.whatsappText}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center justify-center gap-2 w-full bg-[#25D366]/10 hover:bg-[#25D366] text-[#25D366] hover:text-white font-semibold text-sm py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#25D366]/20 hover:scale-[1.02]"
